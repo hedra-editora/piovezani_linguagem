@@ -1,0 +1,43 @@
+\documentclass[semcabeco,showtrims,10pt,spreadimages]{memoir}
+
+\usepackage[post]{hedraoptions} 
+\usepackage[baruch]{hedrastyles}
+\usepackage[xetex,chicagofootnotes,swiftneue]{tipografia}
+
+\usepackage[standart]{toc}
+
+\usepackage{hedraextra}
+\usepackage{penalidades}
+\usepackage{graficos}
+\usepackage{hedralogo}
+\usepackage{hifensextras}
+\usepackage{fichatecnica}
+\usepackage[standart]{aparatos}
+\usepackage{tabelas}
+\usepackage{versos}
+
+%\trimFrame
+
+\linespread{1.15}
+
+\setcounter{tocdepth}{1}     % amplitude da presença das partes no índice
+\setcounter{secnumdepth}{-2} % amplitude da numeração das partes
+
+\makeatletter
+
+\makeatletter
+\def\@xfootnote[#1]{%
+  \protected@xdef\@thefnmark{#1}%
+  \@footnotemark\@footnotetext}
+%\def\footnoterule{\kern-8\p@
+   %\hrule \@width 2in \kern 7.6\p@} % the \hrule is .4pt high
+\skip\footins=10mm\@plus3mm\@minus8mm
+\makeatother
+
+\newcommand{\forceindent}{\leavevmode{\parindent=1,7em\indent}}
+
+\begin{document}
+
+\include{INPUTS}
+
+\end{document}
